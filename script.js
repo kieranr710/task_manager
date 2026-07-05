@@ -142,4 +142,29 @@ function renderTasks() {
   updateCounter();
 }
 
+function toggleDarkMode() {
+  document.body.classList.toggle("dark-mode");
+
+  const darkModeOn = document.body.classList.contains("dark-mode");
+  localStorage.setItem("darkMode", darkModeOn);
+}
+
+function setTheme(theme) {
+  document.body.classList.remove("theme-purple", "theme-blue", "theme-green");
+  document.body.classList.add(`theme-${theme}`);
+
+  localStorage.setItem("theme", theme);
+}
+
+function loadPreferences() {
+  const savedTheme = localStorage.getItem("theme") || "purple";
+  const darkMode = localStorage.getItem("darkMode") === "true";
+
+  setTheme(savedTheme);
+
+  if (darkMode) {
+    document.body.classList.add("dark-mode");
+  }
+}
+loadPreferences();
 renderTasks();

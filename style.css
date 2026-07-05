@@ -140,3 +140,86 @@ li.completed span {
 #dueDateInput {
   max-width: 150px;
 }
+
+.theme-controls {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.theme-controls button {
+  font-size: 12px;
+  padding: 10px;
+}
+
+body.theme-purple {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+body.theme-blue {
+  background: linear-gradient(135deg, #38bdf8, #2563eb);
+}
+
+body.theme-green {
+  background: linear-gradient(135deg, #34d399, #059669);
+}
+
+body.dark-mode {
+  background: #111827;
+  color: white;
+}
+
+body.dark-mode .task-card {
+  background: #1f2937;
+}
+
+body.dark-mode input {
+  background: #374151;
+  color: white;
+  border: 1px solid #4b5563;
+}
+
+body.dark-mode li {
+  background: #374151;
+}
+
+body.dark-mode .subtitle,
+body.dark-mode .counter,
+body.dark-mode .due-date {
+  color: #d1d5db;
+}
+
+@media (max-width: 600px) {
+  body {
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .task-card {
+    padding: 20px;
+  }
+
+  .input-box {
+    flex-direction: column;
+  }
+
+  #dueDateInput {
+    max-width: 100%;
+  }
+
+  .filters,
+  .theme-controls {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .delete-btn {
+    width: 100%;
+  }
+}
