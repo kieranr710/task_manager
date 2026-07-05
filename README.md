@@ -113,5 +113,3 @@ Through this project I strengthened my understanding of:
 **Kieran Richardson**
 
 Computer Science Student at Northumbria University
-
-GitHub:https://github.com/YOUR_USERNAME
